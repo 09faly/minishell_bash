@@ -14,47 +14,47 @@ LIBFT = ./libft/libft.a
 
 NAME = minishell
 
-SRCS = minishell.c \
-		parsing.c \
-		handle_quotes.c \
-		built_env.c \
-		builtins_utils.c \
-		executing.c \
-		find_path.c \
-		expand.c \
-		signal.c \
-		heredoc.c \
-		mini_utils.c \
-		built_export.c \
-		export_utils.c \
-		built_cd.c \
-		built_exit.c \
-		built_echo.c \
-		built_pwd.c \
-		builtins_utilis_two.c \
-		ms_utilis.c \
-		built_unset.c \
-		execute_builtins.c \
-		check.c \
-		free_all.c \
-		pipe.c \
-		executins_utils.c  \
-		execute_cmd.c \
-		expand_utils.c \
-		execute_pipe.c \
-		tokenize.c \
-		split_by_pipe.c \
-		input_redir.c \
-		output_redir.c \
-		heredoc_two.c \
-		redirection.c \
-		pipe_utils.c 
+SRCS = srcs/core/minishell.c \
+		srcs/core/signal.c \
+		srcs/parsing/parsing.c \
+		srcs/parsing/handle_quotes.c \
+		srcs/parsing/expand.c \
+		srcs/parsing/expand_utils.c \
+		srcs/parsing/tokenize.c \
+		srcs/parsing/split_by_pipe.c \
+		srcs/parsing/check.c \
+		srcs/builtins/built_env.c \
+		srcs/builtins/builtins_utils.c \
+		srcs/builtins/builtins_utilis_two.c \
+		srcs/builtins/built_export.c \
+		srcs/builtins/export_utils.c \
+		srcs/builtins/built_cd.c \
+		srcs/builtins/built_exit.c \
+		srcs/builtins/built_echo.c \
+		srcs/builtins/built_pwd.c \
+		srcs/builtins/built_unset.c \
+		srcs/builtins/execute_builtins.c \
+		srcs/execution/executing.c \
+		srcs/execution/find_path.c \
+		srcs/execution/executins_utils.c \
+		srcs/execution/execute_cmd.c \
+		srcs/execution/execute_pipe.c \
+		srcs/execution/pipe.c \
+		srcs/execution/pipe_utils.c \
+		srcs/redirection/heredoc.c \
+		srcs/redirection/heredoc_two.c \
+		srcs/redirection/input_redir.c \
+		srcs/redirection/output_redir.c \
+		srcs/redirection/redirection.c \
+		srcs/utils/mini_utils.c \
+		srcs/utils/ms_utilis.c \
+		srcs/utils/free_all.c
 
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I.
 
 LDFLAGS = -lreadline
 
